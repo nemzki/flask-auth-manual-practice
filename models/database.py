@@ -20,3 +20,28 @@ def init_db():
         password TEXT NOT NULL
         )
         """)
+
+#  INSERTING USER TO DATABASE
+def add_user(email, password_hash):
+    try:
+        with get_db() as conn:
+
+            conn.execute(
+                "INSERT INTO users (email, password) VALUES (?, ?)",
+                (email, password_hash)
+            )
+
+            return True
+    except Exception as e:
+        print("Error adding user: ", e)
+        return False
+
+
+#   Return a user row by email or None if nort found
+def get_user_by_email(email):
+    db = get_db()
+    user = db.execute(
+        "SELECT * FROM users WHERE email = ?",
+        (email,)
+    ).fetchone()
+    return user
