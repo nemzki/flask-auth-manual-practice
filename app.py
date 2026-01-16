@@ -9,3 +9,6 @@ app.secret_key = "practice-flask-auth"
 
 #initialize db
 init_db()
+
+if __name__ == '__main__':
+    app.run(debug=True)
