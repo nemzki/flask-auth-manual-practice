@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AttendEase | {% block title %}Home{% endblock %}</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block style %} {% endblock %}
+
+    <!-- IMPORTS -->
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">AttendEase</h1>
+            {% block navbar %}{% endblock %}
+            <!-- logout button here later -->
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- FLASH MESSAGES -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- PAGE CONTENT -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© AttendEase 2026</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    {% block js %}{% endblock %}
+</body>
+</html>
