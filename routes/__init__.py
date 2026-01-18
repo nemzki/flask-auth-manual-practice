@@ -4,3 +4,4 @@ auth_bp = Blueprint("auth", __name__, url_prefix="/auth", template_folder="templ
 
 # AUTHENTICATION BLUEPRINT ROUTE IMPORTS
 from . import register_routes
+from . import login_routes
