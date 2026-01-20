@@ -4,7 +4,7 @@ def create_user(first_name, last_name, username, email, password):
     try:
         with get_db() as conn:
             conn.execute(
-                "INSERT INTO users (username, email, password) VALUES (?, ?, ?, ?, ?)",
+                "INSERT INTO users (first_name, last_name, username, email, password) VALUES (?, ?, ?, ?, ?)",
                 (first_name, last_name, username, email, password)
             )
             conn.commit()
