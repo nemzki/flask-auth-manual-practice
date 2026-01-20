@@ -25,11 +25,11 @@ def login():
         user = get_user_by_username(username)
 
         # 5. Verify user
-        if user and check_password_hash(user.hash_password, password):
+        if user and check_password_hash(user["password"], password):
 
             # 5.1 Create user session
-            session["user_id"] = user.id
-            session["username"] = user.username
+            session["user_id"] = user["id"]
+            session["username"] = user["username"]
 
             return redirect(url_for('main.educator_dashboard'))
         flash("Invalid credentials.", "danger")
