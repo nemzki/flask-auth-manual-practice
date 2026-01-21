@@ -1,0 +1,119 @@
+
+/*===================================================
+             CONTAINER
+===================================================*/
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/*===================================================
+             TITLE
+===================================================*/
+
+.form-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center
+}
+
+/*===================================================
+             AUTH FORM
+===================================================*/
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08)
+}
+
+/*===================================================
+             FORM GROUP
+===================================================*/
+
+.auth-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/*===================================================
+             FORM INPUT
+===================================================*/
+
+.form-input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: -6px;
+    font-size: 12px;
+    color: #333;
+}
+
+.form-input:focus {
+    border-color: #333;
+}
+
+
+/*===================================================
+             FORM LABEL
+===================================================*/
+
+.form-label {
+    position: absolute;
+    top: 45%;
+    left: 12px;
+    color: #777;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translateY(-20%);
+    transition: 0.2s ease;
+    background: #fff;
+    padding: 0 4px;
+}
+
+/*===================================================
+            ERROR TEXT
+===================================================*/
+
+.error-text {
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+/*===================================================
+            FORM BUTTON
+===================================================*/
+
+.auth-form .form-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+}
+
+.form-btn:hover {
+    opacity: 0.9;
+}

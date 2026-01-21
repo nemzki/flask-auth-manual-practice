@@ -11,4 +11,4 @@ from . import register_routes
 from . import login_routes
 
 # DASHBOARD ROUTE IMPORTS
-from . import educator_dashboard
+from . import dashboard

@@ -11,6 +11,7 @@ app.secret_key = "practice-flask-auth"
 #initialize db
 init_db()
 
+# register blueprints
 app.register_blueprint(auth_bp, url_prefix="/auth")
 app.register_blueprint(main_bp, url_prefix="/main")
 

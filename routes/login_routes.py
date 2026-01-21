@@ -31,7 +31,7 @@ def login():
             session["user_id"] = user["id"]
             session["username"] = user["username"]
 
-            return redirect(url_for('main.educator_dashboard'))
+            return redirect(url_for('main.dashboard'))
         flash("Invalid credentials.", "danger")
 
     return render_template('login.html', form=form)
