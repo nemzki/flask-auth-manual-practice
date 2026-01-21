@@ -14,20 +14,21 @@ It demonstrates the basic workflow of user registration, login, and dashboard ac
 
 ## Directory Structure
 
+```text
 flask-auth-manual-practice/
 │
 ├─ forms/
-│ ├─ init.py
+│ ├─ __init__.py
 │ ├─ login_form.py # Login form with validation
 │ └─ register_form.py # Registration form with validation
 │
 ├─ models/
-│ ├─ init.py
+│ ├─ __init__.py
 │ ├─ database.py # SQLite database handling
 │ └─ user.py # User model and database operations
 │
 ├─ routes/
-│ ├─ init.py
+│ ├─ __init__.py
 │ ├─ dashboard.py # Dashboard route
 │ ├─ login_routes.py # Login routes and logic
 │ └─ register_routes.py # Registration routes and logic
@@ -47,9 +48,7 @@ flask-auth-manual-practice/
 ├─ auth.db # SQLite database
 ├─ requirements.txt
 └─ README.md
-
-yaml
-Copy code
+```
 
 ---
 
@@ -64,83 +63,92 @@ Copy code
 ---
 
 ## Setup Instructions
-
-1. **Clone the repository**
+### 1. Clone the repository
 ```bash
 git clone <repository_url>
 cd flask-auth-manual-practice
-Create and activate a virtual environment
+```
 
-bash
-Copy code
-# Windows
+
+### 2. Create and activate a virtual environment
+
+- Windows:
+```bash
 python -m venv .venv
 .venv\Scripts\activate
+```
 
-# macOS/Linux
+- macOS/Linux:
+
+```bash
 python -m venv .venv
 source .venv/bin/activate
-Install dependencies
+```
 
-bash
-Copy code
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
-Run the application
+```
 
-bash
-Copy code
+### 4. Run the application
+```bash
 python app.py
-Access the app
+```
+
+### 5. Access the app
+
 Open your browser and go to:
 
-arduino
-Copy code
 http://localhost:5000
-Usage
-Register a new account via the registration page.
 
-Login with your credentials.
+### Usage
 
-Access the dashboard after successful login.
+- Register a new account via the registration page.
 
-Flash messages display form errors or success messages.
+- Login with your credentials.
 
-File Notes
-Forms
+- Access the dashboard after successful login.
 
-register_form.py → Fields: first name, last name, username, email, password, confirm password
+- Flash messages display form errors or success messages.
 
-login_form.py → Fields: username/email and password
+## File Notes
 
-Models
+### Forms
 
-user.py → User model and helper functions
+- register_form.py → Fields: first name, last name, username, email, password, confirm password
 
-database.py → SQLite database setup and queries
+- login_form.py → Fields: username/email and password
 
-Routes
+### Models
 
-register_routes.py → Handles registration
+- user.py → User model and helper functions
 
-login_routes.py → Handles login
+- database.py → SQLite database setup and queries
 
-dashboard.py → Protected dashboard route
+### Routes
 
-Templates
+- register_routes.py → Handles registration
 
-auth_base.html → Base layout for auth pages
+- login_routes.py → Handles login
 
-register.html, login.html, dashboard.html → Page-specific templates
+- dashboard.py → Protected dashboard route
 
-Static
+### Templates
 
-auth.css → Styles for authentication forms
+- auth_base.html → Base layout for auth pages
 
-style.css → Global styles, including universal box-sizing
+- register.html, login.html, dashboard.html → Page-specific templates
 
-Known Issues / Limitations
-No password reset functionality
+### Static
 
-No email verification
+- auth.css → Styles for authentication forms
 
-Dashboard content is minimal for practice purposes
+- style.css → Global styles, including universal box-sizing
+
+### Known Issues / Limitations
+
+- No password reset functionality
+
+- No email verification
+
+- Dashboard content is minimal for practice purposes
